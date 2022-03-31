@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tela_dificuldade"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/salmao">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione o modo de jogo:"
+        android:textSize="36dp"
+        android:layout_marginBottom="64dp"
+        android:textColor="@color/black"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/facil"
+        android:layout_width="234dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/rose"
+        android:text="Fácil"
+        android:textColor="@color/black"
+        android:textSize="36dp"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/medio"
+        android:layout_width="234dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/rose"
+        android:text="Médio"
+        android:textColor="@color/black"
+        android:textSize="36dp"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/dificil"
+        android:layout_width="234dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/rose"
+        android:text="Difícil"
+        android:textColor="@color/black"
+        android:textSize="36dp"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/doisjogadores"
+        android:layout_width="234dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/rose"
+        android:text="2 Jogadores"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:strokeWidth="3dp" />
+
+
+</LinearLayout>
