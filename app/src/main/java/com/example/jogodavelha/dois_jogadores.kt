@@ -13,7 +13,9 @@ class dois_jogadores : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dois_jogadores)
+        val restar = findViewById<Button>(R.id.btnRestart)
     }
+
     fun btClick(view: View) {
         val btSelecionado = view as Button
         var cellId = 0
@@ -38,17 +40,18 @@ class dois_jogadores : AppCompatActivity() {
     //Array´s vai guardar as jogadas de cada jogador
     var player1 = ArrayList<Int>()
     var player2 = ArrayList<Int>()
+
     //Turno do jagador
     var activityPlayer = 1
 
-    fun playGame(cellId:Int, btSelecionado:Button){
+    fun playGame(cellId: Int, btSelecionado: Button) {
 
-        if (activityPlayer ==1){
+        if (activityPlayer == 1) {
             btSelecionado.text = "X"
             btSelecionado.setBackgroundColor(Color.TRANSPARENT)
             player1.add(cellId)
             activityPlayer = 2
-        }else{
+        } else {
             btSelecionado.text = "O"
             btSelecionado.setBackgroundColor(Color.TRANSPARENT)
             player2.add(cellId)
@@ -58,109 +61,114 @@ class dois_jogadores : AppCompatActivity() {
         checkWiner()
     }
 
-    fun checkWiner(){
+    fun checkWiner() {
         var winer = -1
 
         //horizontal1
-        if (player1.contains(1) && player1.contains(2) && player1.contains(3)){
+        if (player1.contains(1) && player1.contains(2) && player1.contains(3)) {
             winer = 1
         }
 
-        if (player2.contains(1) && player2.contains(2) && player2.contains(3)){
+        if (player2.contains(1) && player2.contains(2) && player2.contains(3)) {
             winer = 2
         }
 
 
         //horizontal2
-        if (player1.contains(4) && player1.contains(5) && player1.contains(6)){
+        if (player1.contains(4) && player1.contains(5) && player1.contains(6)) {
             winer = 1
         }
 
-        if (player2.contains(4) && player2.contains(5) && player2.contains(6)){
+        if (player2.contains(4) && player2.contains(5) && player2.contains(6)) {
             winer = 2
         }
 
         //horizontal3
-        if (player1.contains(7) && player1.contains(8) && player1.contains(9)){
+        if (player1.contains(7) && player1.contains(8) && player1.contains(9)) {
             winer = 1
         }
 
-        if (player2.contains(7) && player2.contains(8) && player2.contains(9)){
+        if (player2.contains(7) && player2.contains(8) && player2.contains(9)) {
             winer = 2
         }
 
         ////////////////////////////////////////////////////////////////////////
 
         //coluna1
-        if (player1.contains(1) && player1.contains(4) && player1.contains(7)){
+        if (player1.contains(1) && player1.contains(4) && player1.contains(7)) {
             winer = 1
         }
 
-        if (player2.contains(1) && player2.contains(4) && player2.contains(7)){
+        if (player2.contains(1) && player2.contains(4) && player2.contains(7)) {
             winer = 2
         }
 
 
         //coluna2
-        if (player1.contains(2) && player1.contains(5) && player1.contains(8)){
+        if (player1.contains(2) && player1.contains(5) && player1.contains(8)) {
             winer = 1
         }
 
-        if (player2.contains(2) && player2.contains(5) && player2.contains(8)){
+        if (player2.contains(2) && player2.contains(5) && player2.contains(8)) {
             winer = 2
         }
 
         //coluna3
-        if (player1.contains(3) && player1.contains(6) && player1.contains(9)){
+        if (player1.contains(3) && player1.contains(6) && player1.contains(9)) {
             winer = 1
         }
 
-        if (player2.contains(3) && player2.contains(6) && player2.contains(9)){
+        if (player2.contains(3) && player2.contains(6) && player2.contains(9)) {
             winer = 2
         }
 
         ////////////////////////////////////////////////////////////////////////
 
         //vetical1
-        if (player1.contains(1) && player1.contains(5) && player1.contains(9)){
+        if (player1.contains(1) && player1.contains(5) && player1.contains(9)) {
             winer = 1
         }
 
-        if (player2.contains(1) && player2.contains(5) && player2.contains(9)){
+        if (player2.contains(1) && player2.contains(5) && player2.contains(9)) {
             winer = 2
         }
 
         //vertical2
-        if (player1.contains(3) && player1.contains(5) && player1.contains(7)){
+        if (player1.contains(3) && player1.contains(5) && player1.contains(7)) {
             winer = 1
         }
 
-        if (player2.contains(3) && player2.contains(5) && player2.contains(7)){
+        if (player2.contains(3) && player2.contains(5) && player2.contains(7)) {
             winer = 2
         }
 
 
-
-
         //WINER
-        if (winer != -1){
-            if (winer == 1){
+        if (winer != -1) {
+            if (winer == 1) {
                 AlertDialog
                     .Builder(this)
                     .setTitle("X GANHOU")
-                    .setPositiveButton("OK"){_,_ -> }
-                    .setNegativeButton("sair"){_,_ -> finish()}
+                    .setPositiveButton("OK") { _, _ -> }
+                    .setNegativeButton("sair") { _, _ -> finish() }
                     .show()
-            }else{
+            } else {
                 AlertDialog
                     .Builder(this)
                     .setTitle("O GANHOU")
-                    .setPositiveButton("OK"){_,_ -> }
-                    .setNegativeButton("sair"){_,_ -> finish()}
+                    .setPositiveButton("OK") { _, _ -> }
+                    .setNegativeButton("sair") { _, _ -> finish() }
                     .show()
             }
         }
+        fun reset() {
+            player1.clear()
+            player2.clear()
+
+
+        }
     }
+
 
 
 }

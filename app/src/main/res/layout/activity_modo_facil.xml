@@ -9,26 +9,25 @@
     android:gravity="center"
     tools:context=".dois_jogadores">
 
-    <TextView
-        android:layout_width="336dp"
-        android:layout_height="91dp"
-        android:text="2 Jogadores"
-
-        android:textColor="@color/black"
-        android:textSize="36dp" />
-
 
     <LinearLayout
 
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="133dp"
         android:layout_margin="10dp"
         android:gravity="center">
 
 
         <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Fácil"
+            android:textColor="@color/black"
+            android:textSize="36dp" />
+
+        <TextView
             android:id="@+id/textView"
-            android:layout_width="181dp"
+            android:layout_width="116dp"
             android:layout_height="30dp"
             android:layout_marginLeft="40dp"
             android:text="Player1 : 0"
@@ -37,7 +36,7 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginLeft="30dp"
             android:text="Player2 : 0"
@@ -196,21 +195,19 @@
 
     </TableRow>
 
-    <LinearLayout
-        android:gravity="center">
 
-        <Button
-            android:id="@+id/btnRestart"
-            android:layout_width="275dp"
-            android:layout_height="40pt"
-            android:backgroundTint="@color/salmao"
-            android:onClick="btClick"
-            android:text="resetar"
-            android:textColor="@color/black"
-            android:textSize="36dp"
-            app:strokeWidth="1dp" />
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="275dp"
+        android:layout_height="40pt"
+        android:backgroundTint="@color/salmao"
+        android:onClick="btClick"
+        android:text="resetar"
+        android:textColor="@color/black"
+        android:textSize="36dp"
+        app:strokeWidth="1dp" />
 
-    </LinearLayout>
+
 
 
 </TableLayout>
