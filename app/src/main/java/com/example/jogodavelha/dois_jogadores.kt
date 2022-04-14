@@ -5,15 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
 class dois_jogadores : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dois_jogadores)
-        val restar = findViewById<Button>(R.id.btnRestart)
     }
 
     fun btClick(view: View) {
@@ -161,12 +158,10 @@ class dois_jogadores : AppCompatActivity() {
                     .show()
             }
         }
-        fun reset() {
-            player1.clear()
-            player2.clear()
 
 
-        }
+
+
     }
 
 

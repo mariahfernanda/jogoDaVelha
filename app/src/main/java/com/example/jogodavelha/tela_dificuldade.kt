@@ -20,10 +20,38 @@ class tela_dificuldade : AppCompatActivity() {
             irParaDoisJogadores()
 
         }
+
+        facil.setOnClickListener(){
+            irParaModoFacil()
+        }
+
+        medio.setOnClickListener(){
+            irParaModoMedio()
+        }
+
+        dificil.setOnClickListener(){
+            irParaModoDificil()
+        }
+
     }
     private fun irParaDoisJogadores(){
         val doisJogadores = Intent(this, dois_jogadores::class.java)
         startActivity(doisJogadores)
 
+    }
+
+    private fun irParaModoFacil(){
+        val facil = Intent(this, modo_facil::class.java)
+        startActivity(facil)
+    }
+
+    private fun irParaModoMedio(){
+        val medio = Intent(this, modo_medio::class.java)
+        startActivity(medio)
+    }
+
+    private fun irParaModoDificil(){
+        val dificil = Intent(this, modo_difiicl::class.java)
+        startActivity(dificil)
     }
 }
